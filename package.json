@@ -1,0 +1,27 @@
+{
+  "name": "storageapi",
+  "version": "0.1.0",
+  "description": "Interact with local storage just like a REST API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tejaskamath/storeapi.git"
+  },
+  "keywords": [
+    "localstorage",
+    "local",
+    "storage",
+    "REST",
+    "API",
+    "REST API"
+  ],
+  "author": "Tejas Kamath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tejaskamath/storeapi/issues"
+  },
+  "homepage": "https://github.com/tejaskamath/storeapi#readme"
+}

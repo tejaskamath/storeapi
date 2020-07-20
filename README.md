@@ -4,32 +4,32 @@ Interact with local storage just like a REST API.
 
 ## Installation
 
-`npm i storageapi --save`
+`npm i storeapi --save`
 
 ## Usage
 
 ```javascript
-const storageapi = require('storageapi')
+const storeapi = require('@tj/storeapi')
 
 // OR
 
-import storageapi from 'storageapi'
+import storeapi from '@tj/storeapi'
 ```
 
 ## Setting & Getting Single Variables
 
 ```javascript
-storageapi.setVar('date', new Date())
-storageapi.getVar('date') // => 2020-07-20T12:38:07.562Z
+storeapi.setVar('date', new Date())
+storeapi.getVar('date') // => 2020-07-20T12:38:07.562Z
 ```
 
 ## Adding Data
 
 ```javascript
 // Posting
-// storageapi.post adds an object to a locally stored collection
+// storeapi.post adds an object to a locally stored collection
 
-storageapi.post('users', {name: 'Bob'})
+storeapi.post('users', {name: 'Bob'})
 // users => [{name: 'Bob', id: 'ea73b53eb868556b6884ba1a0'}]
 ```
 
@@ -37,24 +37,24 @@ storageapi.post('users', {name: 'Bob'})
 
 ```javascript
 // Getting
-// storageapi.get retreives the data from localStorage
+// storeapi.get retreives the data from localStorage
 
-storageapi.get('users')
+storeapi.get('users')
 // returns [{name: 'Bob', id: 'ea73b53eb868556b6884ba1a0'}]
 ```
 
 ## Editing Data
 ```javascript
 // Patching
-// storageapi.patch edits a single property for the object 
+// storeapi.patch edits a single property for the object 
 
-storageapi.patch('users/ea73b53eb868556b6884ba1a0', {age: 40})
+storeapi.patch('users/ea73b53eb868556b6884ba1a0', {age: 40})
 // users => [{name: 'Bob', age: 40, id: 'ea73b53eb868556b6884ba1a0'}]
 
 // Updating
-// storageapi.put replaces all properties within an object with new properties
+// storeapi.put replaces all properties within an object with new properties
 
-storageapi.put('users/ea73b53eb868556b6884ba1a0', {name: Max, age: 20})
+storeapi.put('users/ea73b53eb868556b6884ba1a0', {name: Max, age: 20})
 // users => [{name: 'Max', age: 20, id: 'ea73b53eb868556b6884ba1a0'}]
 ```
 
@@ -62,10 +62,10 @@ storageapi.put('users/ea73b53eb868556b6884ba1a0', {name: Max, age: 20})
 ## Deleting Data
 ```javascript
 // Deleting
-// storageapi.delete deletes the item within the locally stored collection.
+// storeapi.delete deletes the item within the locally stored collection.
 // Passing no id deletes the entire collection.
 
-storageapi.delete('users/ea73b53eb868556b6884ba1a0')
+storeapi.delete('users/ea73b53eb868556b6884ba1a0')
 // users => []
 
 ```

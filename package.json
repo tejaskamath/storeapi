@@ -1,5 +1,5 @@
 {
-  "name": "storageapi",
+  "name": "@tj/storeapi",
   "version": "0.1.0",
   "description": "Interact with local storage just like a REST API.",
   "main": "index.js",

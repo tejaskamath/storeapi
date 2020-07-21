@@ -16,14 +16,15 @@ const srapi = require('storerestapi')
 import srapi from 'storerestapi'
 ```
 
-## Setting & Getting Single Variables
+### Setting & Getting Single Variables
 
 ```javascript
 srapi.setVar('date', new Date())
 srapi.getVar('date') // => 2020-07-20T12:38:07.562Z
+srapi.deleteVar('date') // Removes 'date' from localStorage
 ```
 
-## Adding Data
+### Adding Data
 
 ```javascript
 // Posting
@@ -33,7 +34,7 @@ srapi.post('users', {name: 'Bob'})
 // users => [{name: 'Bob', id: 'ea73b53eb868556b6884ba1a0'}]
 ```
 
-## Getting data
+### Getting data
 
 ```javascript
 // Getting
@@ -43,7 +44,7 @@ srapi.get('users')
 // returns [{name: 'Bob', id: 'ea73b53eb868556b6884ba1a0'}]
 ```
 
-## Editing Data
+### Editing Data
 ```javascript
 // Patching
 // srapi.patch edits a single property for the object 
@@ -59,7 +60,7 @@ srapi.put('users/ea73b53eb868556b6884ba1a0', {name: Max, age: 20})
 ```
 
 
-## Deleting Data
+### Deleting Data
 ```javascript
 // Deleting
 // srapi.delete deletes the item within the locally stored collection.
@@ -67,5 +68,4 @@ srapi.put('users/ea73b53eb868556b6884ba1a0', {name: Max, age: 20})
 
 srapi.delete('users/ea73b53eb868556b6884ba1a0')
 // users => []
-
 ```

@@ -54,7 +54,7 @@ let put = function (url, obj) {
     // Specific item 
     let id = split[1]
     let ix = data.findIndex(d => d.id == id)
-    data.splice(ix, 1, obj)
+    data.splice(ix, 1, {...obj, id})
   }
   localStorage.setItem(col, JSON.stringify(data))
   return data

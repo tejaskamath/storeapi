@@ -6,7 +6,7 @@ let splitUrl = function (str) {
   return {split, col, data}
 }
 
-let uniqueID = function (n=12){
+let uniqueID = function (n=8){
   function randStr(){
     return Math.random().toString(16).slice(-4);
   }

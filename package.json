@@ -1,6 +1,6 @@
 {
   "name": "storerestapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interact with local storage just like a REST API",
   "main": "index.js",
   "scripts": {

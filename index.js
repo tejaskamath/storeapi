@@ -85,9 +85,13 @@ let getVar = function (key) {
 }
 
 let deleteVar = function (key) {
-  let item = JSON.parse(localStorage.getItem(key))
-  localStorage.removeItem(key)
-  return item
+  try {
+    let item = JSON.parse(localStorage.getItem(key))
+    localStorage.removeItem(key)
+    return item
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 exports.setVar = setVar
